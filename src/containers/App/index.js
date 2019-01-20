@@ -6,6 +6,8 @@ import { fetchData } from '../../actions/data';
 
 import Header from '../../components/Header';
 import Product from '../Product';
+import Sales from '../Sales';
+import { white } from 'ansi-colors';
 
 class App extends Component {
   componentDidMount() {
@@ -17,6 +19,9 @@ class App extends Component {
     return (
       <div className={'content-container'}>
         <Product product={data.product} />
+        <div style={{ background: white, width: '70%' }}>
+          <Sales sales={data.product.sales} />
+        </div>
       </div>
     );
   };
