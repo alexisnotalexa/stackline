@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from "react-redux";
-import { createStore, applyMiddleware } from "redux";
+import { createStore, compose, applyMiddleware } from "redux";
 import ReduxThunk from "redux-thunk";
 import App from './containers/App';
 import Reducers from './reducers';
@@ -9,10 +9,10 @@ import './index.css';
 
 import * as serviceWorker from './serviceWorker';
 
+const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+
 let store = createStore(
-  Reducers,
-  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
-  applyMiddleware(ReduxThunk)
+  Reducers, composeEnhancer(applyMiddleware(ReduxThunk))
 );
 
 ReactDOM.render(

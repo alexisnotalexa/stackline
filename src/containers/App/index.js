@@ -1,19 +1,39 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import './App.css';
 
-import Tag from '../../components/Tag';
-import Product from '../../components/Product';
+import { fetchData } from '../../actions/data';
+
+import Product from '../Product';
 
 class App extends Component {
+  componentDidMount() {
+    this.props.fetchData();
+  }
+
   render() {
+    console.log(this.props);
     return (
       <div className="App">
         <h1>Hello</h1>
-        <Product img={'https://images-na.ssl-images-amazon.com/images/I/51h-a5IaHeL.jpg'} title={'test'} subtitle={'test'} />
-        <Tag name={'Pantry'} />
+        <Product data={this.props.data[0]} />
       </div>
     );
   }
 }
 
-export default App;
+const mapStateToProps = state => {
+  return {
+    data: state.data
+  };
+};
+
+const mapDispatchToProps = dispatch => {
+  return {
+    fetchData: () => {
+      dispatch(fetchData());
+    }
+  };
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);
