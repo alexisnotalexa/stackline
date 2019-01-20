@@ -4,6 +4,7 @@ import './App.css';
 
 import { fetchData } from '../../actions/data';
 
+import Header from '../../components/Header';
 import Product from '../Product';
 
 class App extends Component {
@@ -12,10 +13,9 @@ class App extends Component {
   }
 
   render() {
-    console.log(this.props);
     return (
       <div className="App">
-        <h1>Hello</h1>
+        <Header />
         <Product data={this.props.data[0]} />
       </div>
     );
