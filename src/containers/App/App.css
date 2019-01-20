@@ -1,4 +1,11 @@
 .App {
+  display: flex;
+  flex-direction: column;
   background-color: #F6F8FA;
-  text-align: center;
+  height: stretch;
+}
+
+.content-container {
+  display: flex;
+  padding: 2rem;
 }

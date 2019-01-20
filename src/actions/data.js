@@ -1,14 +1,15 @@
-import data from '../assets/Webdev_data2.json';
+import { getData } from '../api/data';
 
 export const FETCH_DATA = 'FETCH_DATA';
 
 export const fetchData = () => {
   return dispatch => {
-    setTimeout(() => {
-      dispatch({
-        type: FETCH_DATA,
-        data: data[0]
+    getData()
+      .then(data => {
+        dispatch({
+          type: FETCH_DATA,
+          payload: data
+        });
       });
-    }, 500);
   }
 };

@@ -7,13 +7,21 @@ import Product from '../../components/Product';
 
 class ProductContainer extends Component {
   static propTypes = {
-    data: PropTypes.object
+    product: PropTypes.object
   };
 
   render() {
+    const { product } = this.props;
     return (
-      <div>
-        <h1>Product</h1>
+      <div className={'product-container'}>
+        <Product 
+          title={product.title} 
+          image={product.image} 
+          subtitle={product.subtitle} 
+        />
+        <div className={'tag-container'}>
+          {product.tags.map(tag => <Tag name={tag} />)}
+        </div>
       </div>
     );
   }

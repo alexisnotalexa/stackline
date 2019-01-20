@@ -1,12 +1,12 @@
 import React from 'react';
 import './styles.css';
 
-const Product = ({ img, title, subtitle }) => {
+const Product = ({ image, title, subtitle }) => {
   return (
-    <div>
-      <img src={img} alt={title} />
-      <h3>{title}</h3>
-      <span>{subtitle}</span>
+    <div className={'product'}>
+      <img className={'product--image'} src={image} alt={title} />
+      <h3 className={'product--title'}>{title}</h3>
+      <span className={'product--subtitle'}>{subtitle}</span>
     </div>
   );
 };

@@ -12,11 +12,20 @@ class App extends Component {
     this.props.fetchData();
   }
 
+  renderContent = () => {
+    const { data } = this.props;
+    return (
+      <div className={'content-container'}>
+        <Product product={data.product} />
+      </div>
+    );
+  };
+
   render() {
     return (
       <div className="App">
         <Header />
-        <Product data={this.props.data[0]} />
+        {this.props.data.loading ? null : this.renderContent()}
       </div>
     );
   }

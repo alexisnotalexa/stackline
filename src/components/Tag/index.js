@@ -3,8 +3,8 @@ import './styles.css';
 
 const Tag = ({ name }) => {
   return (
-    <div>
-      <span>{name}</span>
+    <div className={'tag'}>
+      <span className={'tag--name'}>{name}</span>
     </div>
   );
 };
