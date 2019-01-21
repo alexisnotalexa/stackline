@@ -46,11 +46,13 @@ class Graph extends Component {
     return (
       <div className={'graph'}>
         <span className={'graph--text'}>Retail Sales</span>
-        <svg width={750} height={300}>
-          <path className={'retail-sales'} d={retailLine(data)} />
-          <path className={'wholesale-sales'} d={wholesaleLine(data)} />
-        </svg>
-        {this.renderMonths()}
+        <div className={'graph--container'}>
+          <svg width={750} height={300}>
+            <path className={'retail-sales'} d={retailLine(data)} />
+            <path className={'wholesale-sales'} d={wholesaleLine(data)} />
+          </svg>
+          {this.renderMonths()}
+        </div>
       </div>
     );
   }
