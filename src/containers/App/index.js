@@ -4,6 +4,7 @@ import './App.css';
 
 import { fetchData } from '../../actions/data';
 
+import Graph from '../Graph';
 import Header from '../../components/Header';
 import Product from '../Product';
 import Sales from '../Sales';
@@ -20,6 +21,7 @@ class App extends Component {
       <div className={'content-container'}>
         <Product product={data.product} />
         <div style={{ background: white, width: '70%' }}>
+          <Graph data={data.product.sales} />
           <Sales sales={data.product.sales} />
         </div>
       </div>

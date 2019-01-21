@@ -39,6 +39,7 @@ class Sales extends Component {
         className={'-striped -highlight'}
         columns={this.columns}
         data={sales}
+        defaultSorted={[{ id: 'weekEnding', desc: false }]}
         showPagination={false}
       />
     );
