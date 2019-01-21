@@ -1,15 +1,33 @@
+.graph {
+  background: white;
+  box-shadow: 0 5px 10px 0 #e3e8ef;
+  margin-bottom: 2rem;
+  padding: 1rem;
+}
+
+.graph--text {
+  font-size: 14px;
+  font-weight: 300;
+  color: #9DA6BD;
+}
+
+.graph--months {
+  display: flex;
+  justify-content: space-between;
+}
+
 svg {
   background-color: white;
 }
 
 .retail-sales {
-  stroke: steelblue;
+  stroke: #5CA6F0;
   stroke-width: 2px;
   fill: none;
 }
 
 .wholesale-sales {
-  stroke: orange;
+  stroke: #9DA6BD;
   stroke-width: 2px;
   fill: none;
 }
