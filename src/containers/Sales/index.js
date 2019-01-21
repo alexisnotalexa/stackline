@@ -35,13 +35,15 @@ class Sales extends Component {
   render() {
     const { sales } = this.props;
     return (
-      <ReactTable
-        className={'-striped -highlight'}
-        columns={this.columns}
-        data={sales}
-        defaultSorted={[{ id: 'weekEnding', desc: false }]}
-        showPagination={false}
-      />
+      <div style={{ background: 'white' }}>
+        <ReactTable
+          className={'-highlight'}
+          columns={this.columns}
+          data={sales}
+          defaultSorted={[{ id: 'weekEnding', desc: false }]}
+          showPagination={false}
+        />
+      </div>
     );
   }
 }

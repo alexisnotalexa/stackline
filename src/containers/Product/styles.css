@@ -1,10 +1,11 @@
 .product-container {
   background-color: white;
+  box-shadow: 0 5px 10px 0 #e3e8ef;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 1rem;
-  height: stretch;
+  height: auto;
   width: 25%;
 }
 
@@ -13,5 +14,6 @@
   flex-wrap: wrap;
   border-bottom: 1px solid #e3e8ef;
   border-top: 1px solid #e3e8ef;
+  justify-content: space-between;
   width: 100%;
 }

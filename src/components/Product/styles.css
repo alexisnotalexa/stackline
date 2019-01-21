@@ -8,13 +8,16 @@
 }
 
 .product--image {
-  width: 150px;
+  width: 125px;
 }
 
 .product--title {
+  color: #344052;
   margin: .5rem;
 }
 
 .product--subtitle {
-  font-size: 12px;
+  color: #9DA6BD;
+  font-size: 14px;
+  font-weight: 300;
 }

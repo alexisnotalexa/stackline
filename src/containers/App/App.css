@@ -2,11 +2,12 @@
   display: flex;
   flex-direction: column;
   background-color: #F6F8FA;
-  height: stretch;
+  height: 100%;
 }
 
 .content-container {
   display: flex;
   justify-content: space-between;
   padding: 2rem;
+  height: 100%;
 }

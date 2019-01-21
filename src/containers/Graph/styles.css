@@ -22,12 +22,12 @@ svg {
 
 .retail-sales {
   stroke: #5CA6F0;
-  stroke-width: 2px;
+  stroke-width: 3px;
   fill: none;
 }
 
 .wholesale-sales {
   stroke: #9DA6BD;
-  stroke-width: 2px;
+  stroke-width: 3px;
   fill: none;
 }
